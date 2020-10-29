@@ -9,4 +9,4 @@ scalaVersion := "2.13.1"
 
 libraryDependencies += guice
 
-libraryDependencies += "org.jooq" % "jooq" % "3.13.0"
+libraryDependencies += "org.jooq" % "jooq" % "3.14.0"
