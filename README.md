@@ -1,5 +1,7 @@
 # sbt-lock dependencyOverrides scope issue
 
+This repo corresponds to [issue #34](https://github.com/tkawachi/sbt-lock/issues/34) of [sbt-lock](https://github.com/tkawachi/sbt-lock).
+
 [According to sbt documentation](https://www.scala-sbt.org/1.x/docs/Library-Management.html#Overriding+a+version), you can use `show update` to verify that sbt chooses the versions specified by `dependencyOverrides`. However, scoping as `dependencyOverrides in Compile` causes the override to be ignored.
 
 `build.sbt` excerpt:
@@ -10,8 +12,7 @@ libraryDependencies += "org.jooq" % "jooq" % "3.14.0"
 `lock.sbt` excerpt:
 ```sbt
 dependencyOverrides in Compile ++= {
-      "org.jooq" % "jooq" % "3.13.0"
-  }
+  "org.jooq" % "jooq" % "3.13.0"
 }
 ```
 
